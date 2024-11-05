@@ -1,0 +1,6 @@
+@JRMTest_HostAddress = http://localhost:5244
+
+GET {{JRMTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
