@@ -8,12 +8,9 @@ namespace JRMTest.Models
     public class Game
     {
         public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Author { get; set; } = string .Empty;
 
-        public int FirstNumber  { get; set; } = 3;
-        public string FirstWord { get; set; } = "Fizz";
-
-        public int SecondNumner { get; set; } = 5;
-
-        public string SecondWord { get; set;} = "Buzz";
+        public List<Rule>? Rules { get; set; }  
     }
 }
