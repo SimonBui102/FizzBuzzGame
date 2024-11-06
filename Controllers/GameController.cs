@@ -11,16 +11,23 @@ namespace JRMTest.Controllers
     [Route("api/[controller]")]
     public class GameController: ControllerBase
     {
-        private static Game _fizzBuzzGame = new Game();
+        private readonly IGameService _gameService;
+
+        public GameController(IGameService gameService)
+        {
+
+            _gameService = gameService;
+            
+        }
       
 
 
         [HttpGet("GameInformation")]
 
-        public ActionResult<Game> GetGameInformation(){
+        public async Task<ActionResult<List<Game>>> GetGameInformation(){
 
 
-            return Ok(_fizzBuzzGame);
+            return Ok( await _gameService.GetAllGame());
         }
 
        
