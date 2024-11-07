@@ -12,7 +12,7 @@ namespace JRMTest.Models
         public int Divisor { get; set; } =0;
         public string Replacement { get; set; } = string.Empty;
 
-        [JsonIgnore]
+        
         public Game? game { get; set; }
 
 
