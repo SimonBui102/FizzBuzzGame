@@ -16,6 +16,7 @@ namespace JRMTest.Data
         }
 
         public DbSet<Game> Games { get; set; }
+        public DbSet<Rule> Rules { get; set; }
         
     }
 }
